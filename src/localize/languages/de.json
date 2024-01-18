@@ -8,7 +8,7 @@
     },
     "map_mode": {
         "invalid": "Ungültige Vorlage!",
-        "vacuum_goto": "Pin & Go",
+        "vacuum_goto": "Gehe zu Punkt",
         "vacuum_goto_predefined": "Punkte",
         "vacuum_clean_segment": "Räume",
         "vacuum_clean_point": "Reinige Punkte",
@@ -168,7 +168,7 @@
             }
         },
         "sensor_dirty_left": {
-            "label": "Sensoren verbleibend"
+            "label": "Sensorreingung verbleibend"
         },
         "filter_left": {
             "label": "Filter verbleibend"
@@ -179,14 +179,46 @@
         "side_brush_left": {
             "label": "Seitenbürste verbleibend"
         },
+        "mop_left": {
+            "label": "Wischmop verbleibend"
+        },
         "cleaning_count": {
             "label": "Anzahl der Reinigungen"
         },
         "cleaned_area": {
             "label": "Gereinigte Fläche"
         },
+        "total_cleaned_area": {
+            "label": "Gesamte gereinigte Fläche"
+        },
         "cleaning_time": {
-            "label": "Zeit der Reinigung"
+            "label": "Reinigungsdauer"
+        },
+        "total_cleaning_time": {
+            "label": "Gesamte Reinungungsdauer"
+        },
+        "bin_full": {
+            "label": "Staubbehälter voll",
+            "value": {
+                "true": "Ja",
+                "false": "Nein"
+            }
+        },
+        "bin_present": {
+            "label": "Staubbehälter vorhanden",
+            "value": {
+                "true": "Ja",
+                "false": "Nein"
+            }
+        },
+        "water_volume": {
+            "label": "Wassermenge"
+        },
+        "mop_pad_humidity": {
+            "label": "Feuchtigkeit des Wischmops"
+        },
+        "dock_detergent": {
+            "label": "Reinigungsmittel"
         }
     },
     "icon": {
@@ -202,11 +234,12 @@
         "hour_shortcut": "h",
         "meter_shortcut": "m",
         "meter_squared_shortcut": "m²",
-        "minute_shortcut": "min"
+        "minute_shortcut": "min",
+        "percent": " %"
     },
     "popups": {
         "success": "Erfolg!",
-        "no_selection": "Keine Auswahl vorgesehen",
+        "no_selection": "Keine Auswahl vorhanden",
         "failed": "Der Dienst konnte nicht aufgerufen werden"
     },
     "editor": {
@@ -217,11 +250,23 @@
         },
         "label": {
             "name": "Titel (optional)",
-            "entity": "Staubsauger Entität (required)",
-            "camera": "Kamera Entität (required)",
-            "vacuum_platform": "Staubsauger-Plattform (required)",
+            "entity": "Staubsauger Entität (erforderlich)",
+            "camera": "Kamera Entität (erforderlich)",
+            "vacuum_platform": "Staubsauger-Platform (erforderlich)",
             "map_locked": "Karte gesperrt (optional)",
-            "two_finger_pan": "Zwei-Finger-Pan (optional)"
+            "two_finger_pan": "Zwei-Finger-Pan (optional)",
+            "platforms_documentation": "Dokumentation der ausgewählten Platform ({0})",
+            "selection": "Auswahl:",
+            "copy": "Kopieren",
+            "copied": "Kopiert!",
+            "set_static_config": "Statische Konfiguration erzeugen",
+            "config_set": "Konfiguration gesetzt!\nÖffne den Konfigurationseditor um sie zu verändern.",
+            "config_set_failed": "Update der Konfiguration gescheitert.",
+            "generate_rooms_config": "Raumkonfiguration erzeugen",
+            "copy_service_call": "Service call kopieren"
+        },
+        "alerts": {
+            "set_static_config": "Verwenden Sie diese Funktion nur, wenn Sie die automatisch erzeugte Konfiguration händisch anpassen wollen.\nFortfahren?"
         }
     }
 }
