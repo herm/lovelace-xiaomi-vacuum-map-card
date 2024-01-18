@@ -86,6 +86,20 @@
     "tiles": {
         "from_sensors": [
             {
+                "tile_id": "mop_pad_humidity",
+                "unique_id_regex": "_select_WaterUsageControlCapability",
+                "label": "tile.mop_pad_humidity.label",
+                "icon": "mdi:water-percent"
+            },
+            {
+                "tile_id": "sensor_dirty_left",
+                "unique_id_regex": "_sensor_ConsumableMonitoringCapability_sensor_all",
+                "label": "tile.sensor_dirty_left.label",
+                "icon": "mdi:eye-outline",
+                "unit": "unit.hour_shortcut",
+                "multiplier": 0.0166666666666666667
+            },
+            {
                 "tile_id": "filter_left",
                 "unique_id_regex": "_sensor_ConsumableMonitoringCapability_filter_main",
                 "label": "tile.filter_left.label",
@@ -110,6 +124,14 @@
                 "multiplier": 0.0166666666666666667
             },
             {
+                "tile_id": "mop_left",
+                "unique_id_regex": "_sensor_ConsumableMonitoringCapability_mop_all",
+                "label": "tile.mop_left.label",
+                "icon": "mdi:brush",
+                "unit": "unit.hour_shortcut",
+                "multiplier": 0.0166666666666666667
+            },
+            {
                 "tile_id": "cleaned_area",
                 "unique_id_regex": "_sensor_CurrentStatisticsCapability_area",
                 "label": "tile.cleaned_area.label",
@@ -124,7 +146,58 @@
                 "icon": "mdi:timer-sand",
                 "unit": "unit.minute_shortcut",
                 "multiplier": 0.0166666666666666667
+            },
+            {
+                "tile_id": "dock_detergent",
+                "unique_id_regex": "_sensor_ConsumableMonitoringCapability_detergent_dock",
+                "label": "tile.dock_detergent.label",
+                "icon": "mdi:water-outline",
+                "unit": "unit.percent"
             }
         ]
-    }
+    },
+    "icons": [
+            {
+            "type": "menu",
+            "menu_id": "operation_mode",
+            "icon_id": "operation_mode",
+            "unique_id_regex": "_select_OperationModeControlCapability",
+            "available_values_attribute": "options",
+            "icon": "mdi:water-off",
+            "icon_mapping": {
+                "vacuum_and_mop": "mdi:robot-vacuum",
+                "vacuum": "mdi:vacuum",
+                "mop": "mdi:liquid-spot"
+            },
+            "tap_action": {
+                "action": "call-service",
+                "service": "select.select_option",
+                "service_data": {
+                    "option": "[[value]]",
+                    "entity_id": "[[entity_id]]"
+                }
+            }
+        },
+        {
+            "type": "menu",
+            "menu_id": "mop_pad_humidity",
+            "icon_id": "mop_pad_humidity",
+            "unique_id_regex": "_select_WaterUsageControlCapability",
+            "available_values_attribute": "options",
+            "icon": "mdi:water-off",
+            "icon_mapping": {
+                "low": "mdi:water-minus",
+                "medium": "mdi:water",
+                "high": "mdi:water-plus"
+            },
+            "tap_action": {
+                "action": "call-service",
+                "service": "select.select_option",
+                "service_data": {
+                    "option": "[[value]]",
+                    "entity_id": "[[entity_id]]"
+                }
+            }
+        }
+    ]
 }
