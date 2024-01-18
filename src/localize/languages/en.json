@@ -216,6 +216,9 @@
         },
         "mop_pad_humidity": {
             "label": "Mop pad"
+        },
+        "dock_detergent": {
+            "label": "Dock detergent"
         }
     },
     "icon": {
@@ -231,7 +234,8 @@
         "hour_shortcut": "h",
         "meter_shortcut": "m",
         "meter_squared_shortcut": "m²",
-        "minute_shortcut": "min"
+        "minute_shortcut": "min",
+        "percent": "%"
     },
     "popups": {
         "success": "Success!",
